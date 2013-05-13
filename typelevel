@@ -1,2 +1,4 @@
+#!/usr/bin/env bash
+
 cd $TYPELEVEL_HOME
 sbt console
