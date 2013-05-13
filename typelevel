@@ -1,2 +1,2 @@
 cd $TYPELEVEL_HOME
-sbt
+sbt console

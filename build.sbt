@@ -38,4 +38,4 @@ libraryDependencies ++= Seq(
 
 scalacOptions += "-feature"
 
-initialCommands in console := "import scalaz._, Scalaz._, shapeless._, spire._"
+initialCommands in console := "import scalaz._, shapeless._, spire._"
