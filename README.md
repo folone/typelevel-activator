@@ -5,6 +5,7 @@ All the [typelevel.scala](http://typelevel.org/) stack ([scalaz](https://github.
 
 Installation
 ------------
+
 ```sh
 $ cd
 $ mkdir bin
@@ -16,3 +17,5 @@ $ cd
 $ source .bashrc # .againwhateverrc
 $ typelevel # ready for using
 ```
+
+**Prerequisites:** sbt, git.
