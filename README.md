@@ -1,7 +1,7 @@
 typelevel-repl
 ==============
 
-All the typelevel.scala stack ([scalaz](https://github.com/scalaz/scalaz), [shapeless](https://github.com/milessabin/shapeless), [spire](https://github.com/non/spire)) and their contrib libraries at your fingertips.
+All the [typelevel.scala](http://typelevel.org/) stack ([scalaz](https://github.com/scalaz/scalaz), [shapeless](https://github.com/milessabin/shapeless), [spire](https://github.com/non/spire)) and their contrib libraries at your fingertips.
 
 Installation
 ------------
