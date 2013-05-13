@@ -1,0 +1,2 @@
+cd $TYPELEVEL_HOME
+sbt
