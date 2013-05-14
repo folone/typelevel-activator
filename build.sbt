@@ -17,7 +17,8 @@ libraryDependencies ++= Seq(
 
 // Spire
 libraryDependencies ++= Seq(
-  "org.spire-math" %% "spire" % "0.4.0"
+  "org.spire-math" %% "spire"                    % "0.4.0",
+  "org.spire-math" %% "spire-scalacheck-binding" % "0.4.0" % "test"
 )
 
 // Scalaz-contrib
