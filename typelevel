@@ -1,4 +1,12 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 cd $TYPELEVEL_HOME
-sbt console
+if [ "$#" -eq 0 ]
+  then
+    sbt console
+elif [ "$1" = "upgrade" ]
+  then
+    git pull
+  else
+    sbt $@
+fi
