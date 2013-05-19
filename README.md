@@ -6,6 +6,8 @@ All the [typelevel.scala](http://typelevel.org/) stack ([scalaz](https://github.
 Installation
 ------------
 
+**Prerequisites:** sbt, git, sed.
+
 ```sh
 $ cd
 $ mkdir bin
@@ -16,9 +18,15 @@ $ echo export PATH=$PATH:$TYPELEVEL_HOME >> ~/.bashrc
 $ cd
 $ source .bashrc # .againwhateverrc
 $ typelevel # ready for using
-  > usage # read the help
-  > exit # exit
 $ typelevel upgrade # to fetch the latest changes
 ```
 
-**Prerequisites:** sbt, git, sed.
+Usage
+-----
+
+```sh
+$ typelevel #start
+  > usage # list available commands
+  > init projectname org.myorganization # creates a new project
+  > exit
+```
