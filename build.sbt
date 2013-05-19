@@ -1,5 +1,11 @@
 scalaVersion := "2.10.1"
 
+organization := "replace-project-organization"
+
+name := "replace-project-name"
+
+version := "0.1-SNAPSHOT"
+
 // Scalaz
 libraryDependencies ++= Seq(
   "org.scalaz"     %% "scalaz-core"               % "7.0.0",
@@ -15,7 +21,8 @@ libraryDependencies ++= Seq(
 
 // Spire
 libraryDependencies ++= Seq(
-  "org.spire-math" %% "spire" % "0.4.0"
+  "org.spire-math" %% "spire"                    % "0.4.0",
+  "org.spire-math" %% "spire-scalacheck-binding" % "0.4.0" % "test"
 )
 
 // Scalaz-contrib
@@ -37,5 +44,3 @@ libraryDependencies ++= Seq(
 )
 
 scalacOptions += "-feature"
-
-initialCommands in console := "import scalaz._, Scalaz._, shapeless._, spire._"
