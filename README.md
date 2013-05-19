@@ -25,8 +25,8 @@ Usage
 -----
 
 ```sh
-$ typelevel #start
+$ typelevel # start
   > usage # list available commands
-  > init projectname org.myorganization # creates a new project
+  > init projectname org.myorganization # creates a new project at the directory you are currently in, subdirectory with projectname
   > exit
 ```
