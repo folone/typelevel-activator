@@ -1,10 +1,8 @@
 #!/usr/bin/bash
 
+export TYPELEVEL_CURRENT_DIR=`pwd`
 cd $TYPELEVEL_HOME
-if [ "$#" -eq 0 ]
-  then
-    sbt console
-elif [ "$1" = "upgrade" ]
+if [ "$1" = "upgrade" ]
   then
     git pull
   else

@@ -16,7 +16,9 @@ $ echo export PATH=$PATH:$TYPELEVEL_HOME >> ~/.bashrc
 $ cd
 $ source .bashrc # .againwhateverrc
 $ typelevel # ready for using
+  > usage # read the help
+  > exit # exit
 $ typelevel upgrade # to fetch the latest changes
 ```
 
-**Prerequisites:** sbt, git.
+**Prerequisites:** sbt, git, sed.
