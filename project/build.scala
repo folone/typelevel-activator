@@ -61,14 +61,17 @@ object build extends Build {
         val projectName = args.head
         val projectOrganization = args(1)
         val path = System.getenv("TYPELEVEL_CURRENT_DIR")
-        val res = List("git", "clone", "git://github.com/folone/typelevel-activator.git", "-b", "project-scaffolding", path + "/" + projectName).!
-        List("rm", "-rf", path + "/" + projectName + "/.git/").!
-        List("sed", "-i", "s/replace-project-name/" + projectName + "/", path + "/" + projectName + "/build.sbt").!
-        List("sed", "-i", "s/replace-project-organization/" + projectOrganization + "/", path + "/" + projectName + "/build.sbt").!
+        val res = List("git", "clone", "git://github.com/folone/typelevel-activator.git",
+          "-b", "project-scaffolding", path + "/" + projectName).! + List("rm", "-rf",
+            path + "/" + projectName + "/.git/").! + List("sed", "-i",
+              "s/replace-project-name/" + projectName + "/",
+              path + "/" + projectName + "/build.sbt").! + List("sed", "-i",
+                "s/replace-project-organization/" + projectOrganization + "/",
+                path + "/" + projectName + "/build.sbt").!
         if(res == 0)
-          println("Done, you can now exit typelevel activator, cd to your new project and run abt command.")
+          println("Done, you can now exit typelevel activator, cd to your new project and run sbt command.")
         else
-          println("Something went wrong")
+          println("Something went wrong.")
       }
     }
   }
