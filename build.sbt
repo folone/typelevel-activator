@@ -1,6 +1,12 @@
-scalaVersion := "2.10.2"
+seq(conscriptSettings :_*)
+
+organization := "info.folone"
 
 name := "typelevel-activator"
+
+version := "0.1.0"
+
+scalaVersion := "2.10.2"
 
 // Scalaz
 libraryDependencies ++= Seq(
@@ -37,6 +43,11 @@ libraryDependencies ++= Seq(
   "org.typelevel" %% "shapeless-scalacheck" % "0.1.1",
   "org.typelevel" %% "shapeless-spire"      % "0.1.1",
   "org.typelevel" %% "shapeless-scalaz"     % "0.1.1"
+)
+
+libraryDependencies ++= Seq(
+  "org.scala-lang" % "scala-compiler" % "2.10.2",
+  "org.scala-lang" % "scala-library"  % "2.10.2"
 )
 
 scalacOptions += "-feature"

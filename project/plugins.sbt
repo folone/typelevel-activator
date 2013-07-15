@@ -1,3 +1,1 @@
-resolvers += "jgit-repo" at "http://download.eclipse.org/jgit/maven"
-
-addSbtPlugin("com.typesafe.sbt" % "sbt-git" % "0.5.0")
+addSbtPlugin("net.databinder" % "conscript-plugin" % "0.3.5")

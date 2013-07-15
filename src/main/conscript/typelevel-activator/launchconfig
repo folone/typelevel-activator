@@ -1,0 +1,10 @@
+[app]
+  version: 0.1.0
+  org: info.folone
+  name: typelevel-activator_2.10
+  class: info.folone.App
+  cross-versioned: false
+[scala]
+  version: 2.10.2
+[repositories]
+  local
