@@ -37,8 +37,9 @@ object build extends Build {
   lazy val activator = Project(
     id = "typelevel-activator",
     base = file("."),
-    settings = Defaults.defaultSettings ++ Seq(
-      scalaVersion := "2.10.1",
+    settings = Defaults.defaultSettings ++
+    Seq(
+      scalaVersion := "2.10.2",
       initialCommands := "import scalaz._, shapeless._, spire._",
       init := initImpl,
       help := helpImpl,
