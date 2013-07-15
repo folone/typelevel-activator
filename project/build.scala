@@ -3,10 +3,10 @@ import Keys._
 
 object build extends Build {
   lazy val scalazDependencies = Seq(
-    "org.scalaz"     %% "scalaz-core"               % "7.0.0",
-    "org.scalaz"     %% "scalaz-effect"             % "7.0.0",
-    "org.scalaz"     %% "scalaz-typelevel"          % "7.0.0",
-    "org.scalaz"     %% "scalaz-scalacheck-binding" % "7.0.0" % "test"
+    "org.scalaz"     %% "scalaz-core"               % "7.0.2",
+    "org.scalaz"     %% "scalaz-effect"             % "7.0.2",
+    "org.scalaz"     %% "scalaz-typelevel"          % "7.0.2",
+    "org.scalaz"     %% "scalaz-scalacheck-binding" % "7.0.2" % "test"
   )
 
   lazy val shapelessDependencies = Seq(
@@ -40,7 +40,7 @@ object build extends Build {
     settings = Defaults.defaultSettings ++ Seq(
       scalaVersion := "2.10.1",
       initialCommands := "import scalaz._, shapeless._, spire._",
-      init <<= inputTask(initImpl),
+      init := initImpl,
       help := helpImpl,
       shellPrompt := { _ ⇒ "λ typelevel → " },
       libraryDependencies := scalazDependencies ++
@@ -51,29 +51,11 @@ object build extends Build {
     )
   )
 
-  lazy val init = InputKey[Unit]("init")
+  lazy val init = TaskKey[Unit]("init")
   lazy val help = TaskKey[Unit]("usage")
-  lazy val initImpl = { argTask: TaskKey[Seq[String]] ⇒
-    argTask map { args: Seq[String] ⇒
-      if (args.length < 2)
-        println("Provide project name and organization.")
-      else {
-        val projectName = args.head
-        val projectOrganization = args(1)
-        val path = System.getenv("TYPELEVEL_CURRENT_DIR")
-        val res = List("git", "clone", "git://github.com/folone/typelevel-activator.git",
-          "-b", "project-scaffolding", path + "/" + projectName).! + List("rm", "-rf",
-            path + "/" + projectName + "/.git/").! + List("sed", "-i",
-              "s/replace-project-name/" + projectName + "/",
-              path + "/" + projectName + "/build.sbt").! + List("sed", "-i",
-                "s/replace-project-organization/" + projectOrganization + "/",
-                path + "/" + projectName + "/build.sbt").!
-        if(res == 0)
-          println("Done, you can now exit typelevel activator, cd to your new project and run sbt command.")
-        else
-          println("Something went wrong.")
-      }
-    }
+  lazy val initImpl = {
+    Process("g8" :: "folone/typelevel-activator" :: Nil, Path.userHome).!<
+    println("Done")
   }
   lazy val helpImpl = {
     val helpMsg = """console                       -- to launch repl

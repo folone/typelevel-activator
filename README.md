@@ -6,7 +6,7 @@ All the [typelevel.scala](http://typelevel.org/) stack ([scalaz](https://github.
 Installation
 ------------
 
-**Prerequisites:** sbt, git, sed.
+**Prerequisites:** sbt, [giter8](https://github.com/n8han/giter8).
 
 ```sh
 $ cd
@@ -27,6 +27,6 @@ Usage
 ```sh
 $ typelevel # start
   > usage # list available commands
-  > init projectname org.myorganization # creates a new project at the directory you are currently in, subdirectory with projectname
+  > init # creates a new project. Asks for organization and the project name beforehand.
   > exit
 ```
