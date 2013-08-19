@@ -4,10 +4,10 @@ name := "typelevel-activator"
 
 // Scalaz
 libraryDependencies ++= Seq(
-  "org.scalaz"     %% "scalaz-core"               % "7.0.0",
-  "org.scalaz"     %% "scalaz-effect"             % "7.0.0",
-  "org.scalaz"     %% "scalaz-typelevel"          % "7.0.0",
-  "org.scalaz"     %% "scalaz-scalacheck-binding" % "7.0.0" % "test"
+  "org.scalaz"     %% "scalaz-core"               % "7.0.2",
+  "org.scalaz"     %% "scalaz-effect"             % "7.0.2",
+  "org.scalaz"     %% "scalaz-typelevel"          % "7.0.2",
+  "org.scalaz"     %% "scalaz-scalacheck-binding" % "7.0.2" % "test"
 )
 
 // Shapeless
@@ -23,13 +23,13 @@ libraryDependencies ++= Seq(
 
 // Scalaz-contrib
 libraryDependencies ++= Seq(
-  "org.typelevel" %% "scalaz-contrib-210"        % "0.1.4",
-  "org.typelevel" %% "scalaz-contrib-validation" % "0.1.4",
-  "org.typelevel" %% "scalaz-contrib-undo"       % "0.1.4",
+  "org.typelevel" %% "scalaz-contrib-210"        % "0.1.5",
+  "org.typelevel" %% "scalaz-contrib-validation" % "0.1.5",
+  "org.typelevel" %% "scalaz-contrib-undo"       % "0.1.5",
   "org.typelevel" %% "scalaz-dispatch"           % "0.1.4",
-  "org.typelevel" %% "scalaz-lift"               % "0.1.4",
-  "org.typelevel" %% "scalaz-nscala-time"        % "0.1.4",
-  "org.typelevel" %% "scalaz-spire"              % "0.1.4"
+  "org.typelevel" %% "scalaz-lift"               % "0.1.5",
+  "org.typelevel" %% "scalaz-nscala-time"        % "0.1.5",
+  "org.typelevel" %% "scalaz-spire"              % "0.1.5"
 )
 
 // Shapeless-contrib
